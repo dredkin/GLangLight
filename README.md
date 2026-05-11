@@ -11,7 +11,7 @@
 
 ## Features
 
-- **Automatic current keyboard language detection** — polls the foreground window's keyboard layout every 200 ms via `GetKeyboardLayout()`
+- **Automatic current keyboard language detection** — polls the foreground window's keyboard layout every 200ms
 - **Per-language LED colour** — configurable colour per installed language; defaults:
   | Order | Language | Default colour |
   |---|---|---|
@@ -19,9 +19,7 @@
   | 2nd | (any) | 🟥 Red |
   | 3rd | (any) | 🟦 Blue |
   | 4th+ | (any) | 🎲 Random bright colour |
-- **Settings dialog** — tray right-click -> Settings... opens a dialog listing all installed keyboard languages with colour swatches; double-click or "Change colour..." to open the Windows colour picker
-- **Persistent settings** — colours saved to `HKCU\Software\GLanglight\LangColors` registry key
-- **Dynamic tray icon** — the system tray icon background changes to match the current keyboard colour; the "G" letter is black on light backgrounds and white on dark ones (ITU-R BT.709 luminance)
+- **Settings dialog** — tray right-click -> Settings... opens a dialog listing all installed keyboard languages; double-click or "Change colour..." to open the Windows colour picker
 - **Self-contained EXE** — MSVC C++ runtime is statically linked (`/MT`); no Visual C++ Redistributable needed
 
 ---
@@ -31,8 +29,6 @@
 **Settings dialog**
 
 ![GLanglight Settings](docs/settings.png)
-
-*Owner-draw listbox with per-language colour swatches and hex codes; Windows 11-style card layout.*
 
 ---
 
@@ -81,6 +77,14 @@ HKEY_CURRENT_USER\Software\GLanglight\LangColors
 ```
 
 Values are `DWORD` entries named by 4-hex-digit language ID (e.g. `0009` = English, `0019` = Russian) storing a `COLORREF` value.
+
+## Auto-start registry entry
+
+When "Run at Windows startup" is enabled in Settings, the application creates a registry entry:
+
+```
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+```
 
 ---
 
