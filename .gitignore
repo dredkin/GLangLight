@@ -1,0 +1,52 @@
+# ── Build output ──────────────────────────────────────────────────────────
+bin/
+obj/
+build/
+
+# ── Visual Studio files ───────────────────────────────────────────────────
+.vs/
+*.user
+*.suo
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+*.VC.db
+*.VC.opendb
+ipch/
+.kilo/
+
+# ── CMake ─────────────────────────────────────────────────────────────────
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+
+# ── Compiled binaries and intermediates ───────────────────────────────────
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+*.exp
+*.lib
+!lib/x64/LogitechLEDLib.lib
+!lib/x86/LogitechLEDLib.lib
+*.obj
+*.res
+*.tlog
+*.lastbuildstate
+*.recipe
+*.log
+
+# ── Windows ───────────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+tools/

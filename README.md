@@ -15,10 +15,10 @@
 - **Per-language LED colour** — configurable colour per installed language; defaults:
   | Order | Language | Default colour |
   |---|---|---|
-  | 1st | (any) | White |
-  | 2nd | (any) | Red |
-  | 3rd | (any) | Blue |
-  | 4th+ | (any) | Random bright colour |
+  | 1st | (any) | ⬜ White |
+  | 2nd | (any) | 🟥 Red |
+  | 3rd | (any) | 🟦 Blue |
+  | 4th+ | (any) | 🎲 Random bright colour |
 - **Settings dialog** — tray right-click -> Settings... opens a dialog listing all installed keyboard languages with colour swatches; double-click or "Change colour..." to open the Windows colour picker
 - **Persistent settings** — colours saved to `HKCU\Software\GLanglight\LangColors` registry key
 - **Dynamic tray icon** — the system tray icon background changes to match the current keyboard colour; the "G" letter is black on light backgrounds and white on dark ones (ITU-R BT.709 luminance)
@@ -28,9 +28,11 @@
 
 ## Screenshots
 
-| Tray icon (red = Russian) | Settings dialog |
-|---|---|
-| *(red icon with white G)* | *(ListView with language names and colour swatches)* |
+**Settings dialog**
+
+![GLanglight Settings](docs/settings.png)
+
+*Owner-draw listbox with per-language colour swatches and hex codes; Windows 11-style card layout.*
 
 ---
 
